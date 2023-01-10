@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>The Number Guesser Game</title>
+<title>The Number Guesser Game !</title>
 <link rel=stylesheet href="style.css">
 </head>
 <body>
