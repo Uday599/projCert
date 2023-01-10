@@ -1,0 +1,19 @@
+pipeline {
+    
+    agent any
+
+    stages {
+        stage('SCM') {
+            steps {
+              git 'https://github.com/Uday599/projCert.git'  
+            }
+        }
+		stage ('Send index.php over SSH to apache-server') {
+		    steps {
+		        sshPublisher(publishers: [sshPublisherDesc(configName: 'apache-server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '//var/www/html', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '**/*.php')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+		    }
+
+}		
+		
+    }
+}
