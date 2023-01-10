@@ -4,7 +4,7 @@
 <link rel=stylesheet href="style.css">
 </head>
 <body>
-<h3>Do you Want to play a game?</h3>
+<h3>Are you ready to play this game?</h3>
 <p>Pick a number between <b>1</b> and <b>5</b>? </p>
 <button onclick="playTheGame('1')"> 1 </button> &nbsp;
 <button onclick="playTheGame('2')"> 2 </button> &nbsp;
